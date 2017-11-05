@@ -1,0 +1,11 @@
+[Unit]
+Description = Pyxample system service
+
+[Service]
+Type = simple
+ExecStart = /usr/local/bin/pyxample
+Restart = always
+RestartSec = 10
+
+[Install]
+WantedBy = multi-user.target

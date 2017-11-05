@@ -1,0 +1,5 @@
+.coverage
+.eggs
+.hypothesis
+*.egg-info
+*.pyc
