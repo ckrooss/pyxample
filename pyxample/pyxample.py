@@ -18,8 +18,8 @@ def cli():
     import argparse
     parser = argparse.ArgumentParser()
     verb = parser.add_mutually_exclusive_group()
-    verb.add_argument("-v", "--verbose", help="print more", action='store_true')
-    verb.add_argument("-q", "--quiet", help="print less", action='store_true')
+    verb.add_argument("-v", "--verbose", help="log more", action='store_true')
+    verb.add_argument("-q", "--quiet", help="log less", action='store_true')
     args = parser.parse_args()
 
     if args.verbose:

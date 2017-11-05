@@ -6,7 +6,6 @@ setup(
     name='pyxample',
     version="0.1.0",
     description='Full blown python example project',
-    long_description=open('README.md').read(),
     packages=['pyxample', 'pyxample.lib'],
     install_requires=['requests',
                       'systemd;platform_system=="linux2"'],
