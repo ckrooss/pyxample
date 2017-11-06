@@ -1,9 +1,23 @@
 language: python
 
 env:
+  global:
+    - CC_TEST_REPORTER_ID=04bbad878d8dd70115927bd5285bfe46fe78455c38a464596540f4feb9d7cf67
+  matrix:
   - TOXENV=py27
   - TOXENV=py34
 
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+
 install: pip install tox
 
-script: tox
+script:
+  - tox
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
