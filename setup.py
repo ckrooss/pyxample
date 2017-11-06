@@ -11,8 +11,8 @@ setup(
                       'systemd;platform_system=="linux2"'],
     python_requires='>=2.7',
     test_suite='nose.collector',
-    tests_require=['nose', 'coverage', 'hypothesis'],
-    setup_requires=['nose', 'coverage', 'hypothesis'],
+    tests_require=['nose', 'coverage', 'hypothesis', 'codeclimate-test-reporter'],
+    setup_requires=['nose', 'coverage', 'hypothesis', 'codeclimate-test-reporter'],
     author='Christopher Krooß',
     author_email='c.krooss@gmail.com',
     entry_points={
